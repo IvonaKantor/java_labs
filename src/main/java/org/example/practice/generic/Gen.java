@@ -1,4 +1,4 @@
-package org.example;
+package org.example.practice.generic;
 
 public class Gen <T>{
     T ob;
