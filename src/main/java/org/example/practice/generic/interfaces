@@ -1,0 +1,12 @@
+public interface Train {
+    default void go(){
+        System.out.println("Train is going on");
+    }
+}
+
+class Auto implements Train{
+    @Override
+    public void go(){
+        System.out.println("Auto is going on");
+    }
+}
