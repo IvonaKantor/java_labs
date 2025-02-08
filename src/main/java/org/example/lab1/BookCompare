@@ -1,0 +1,28 @@
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class BookCompare implements Comparable<Book>{
+    public int compare (Book o1, Book o2) {
+        return (o1.title.compareTo(o2.title));
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return 0;
+    }
+}
+
+class Test{
+    public void go(){
+        Book b1 = new Book("Book about cats");
+        Book b2 = new Book("How be healthy");
+        Book b3 = new Book("Our planet");
+
+        BookCompare bc = new BookCompare();
+        TreeSet<Book> tree = new TreeSet<Book>((SortedSet<Book>) bc);
+        tree.add(new Book("Book about cats"));
+        tree.add(new Book("How be healthy"));
+        tree.add(new Book("Our planet"));
+        System.out.println(tree);
+    }
+}
